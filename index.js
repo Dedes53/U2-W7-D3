@@ -33,16 +33,16 @@ const fetchBooks = function () {
 
             books.forEach((book) => {
                 cardContainer.innerHTML += `
-                <div class="card col col-md-4 col-lg-3 shadow-lg" style="width: 18rem;">
-                    <img src="${book.img}" class="card-img-top" alt="${book.title}">
-                        <div class="card-body d-flex flex-column justify-content-between">  
+                    <div class="card col col-md-4 col-lg-3 shadow-lg" style="width: 18rem;">                        
+                        <div class="bg-light d-flex align-items-center justify-content-center" style="height: 350px; overflow: hidden;">
+                            <img src="${book.img}" class="img-fluid p-3" alt="${book.title}" style="max-height: 100%; max-width: 100%; object-fit:  contain;">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
                             <h5 class="card-title">${book.title}</h5>
                             <p class="card-text"><span>${book.price}</span>€</p>
                             <a href="#" class="btn btn-primary">Buy</a>
-
                         </div>
-                </div>
-            `;
+                    </div>`;
             });
         })
 
